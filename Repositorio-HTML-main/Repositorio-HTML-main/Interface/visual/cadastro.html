@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #160808;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .cadastro-container {
+      background-color: rgb(211, 169, 177);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(202, 14, 14, 0.1);
+      width: 350px;
+    }
+
+    .cadastro-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    .back-link {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .back-link a {
+      text-decoration: none;
+      color: #1976d2;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="cadastro-container">
+  <h2>Cadastro</h2>
+  <form action="cadastro.php" method="POST">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+    </div>
+
+    <div class="form-group">
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" name="cep" required maxlength="8">
+    </div>
+
+    <div class="form-group">
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" required>
+    </div>
+
+    <div class="form-group">
+      <label for="numero">Número:</label>
+      <input type="number" id="numero" name="numero" required>
+    </div>
+
+    <div class="form-group">
+      <label for="bairro">Bairro:</label>
+      <input type="text" id="bairro" name="bairro" required>
+    </div>
+
+    <div class="form-group">
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="cidade">
+    </div>
+
+    <div class="form-group">
+      <label for="estado">Estado:</label>
+      <input type="text" id="estado" name="estado" required>
+    </div>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <div class="back-link">
+    <p>Já tem uma conta? <a href="login.html">Voltar para o login</a></p>
+  </div>
+  
+<script src="assets/js/index.js"></script>
+
+</body>
+</html>
