@@ -20,3 +20,14 @@ nome varchar(100),
 descricao varchar(500)
 );
 
+create table funcionario_por_cargo (
+	id BIGINT PRIMARY KEY,
+    funcionario_id BIGINT NOT NULL,
+    cargo_id BIGINT NOT NULL,
+    detalhes TEXT,
+    data_inicio DATE NOT NULL,
+    data_fim DATE,
+    CONSTRAINT fk_funcionario FOREIGN KEY (funcionario_id) REFERENCES funcionarios(id),
+    CONSTRAINT fk_cargo FOREIGN KEY (cargo_id) REFERENCES cargos(id)
+);
+
